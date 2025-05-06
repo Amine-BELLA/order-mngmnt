@@ -18,6 +18,13 @@ import java.util.stream.Collectors;
 public class OrderController {
     private final ViewOrderHistoryUseCase useCase;
 
+    /**
+     * Retrieves the list of orders for a specific customer.
+     *
+     * @param customerId the ID of the customer whose order history is requested
+     * @return a list of {@link OrderDto} representing the customer's orders
+     */
+
     @GetMapping
     public List<OrderDto> getOrders(@PathVariable Long customerId) {
         return useCase.execute(customerId).stream()

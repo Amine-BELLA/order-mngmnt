@@ -15,11 +15,15 @@ public class RefundController {
         this.useCase = useCase;
     }
 
+    /**
+     * Submits a refund request for a specific product in an order.
+     *
+     * @param customerId the ID of the customer submitting the refund request
+     * @param dto the {@link RefundRequestDto} containing refund details including order ID, product ID,
+     *            issue description, and picture URL as evidence
+     */
     @PostMapping
-    public void requestRefund(
-            @PathVariable Long customerId,
-            @RequestBody RefundRequestDto dto
-    ) {
+    public void requestRefund(@PathVariable Long customerId, @RequestBody RefundRequestDto dto) {
         RefundCommand command = new RefundCommand(
                 customerId,
                 dto.orderId(),
