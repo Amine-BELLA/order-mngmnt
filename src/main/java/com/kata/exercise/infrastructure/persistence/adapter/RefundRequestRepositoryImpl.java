@@ -5,7 +5,9 @@ import com.kata.exercise.domain.repository.RefundRequestRepository;
 import com.kata.exercise.infrastructure.persistence.entity.RefundRequestEntity;
 import com.kata.exercise.infrastructure.persistence.repository.RefundRequestJpaRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
+@Repository
 @RequiredArgsConstructor
 public class RefundRequestRepositoryImpl implements RefundRequestRepository {
 

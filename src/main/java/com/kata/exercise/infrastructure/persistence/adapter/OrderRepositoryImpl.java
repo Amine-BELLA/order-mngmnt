@@ -5,10 +5,12 @@ import com.kata.exercise.domain.model.OrderItem;
 import com.kata.exercise.domain.repository.OrderRepository;
 import com.kata.exercise.infrastructure.persistence.repository.SpringDataOrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Repository
 @RequiredArgsConstructor
 public class OrderRepositoryImpl implements OrderRepository {
 
